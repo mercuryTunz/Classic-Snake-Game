@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run Game</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="game-card" aria-label="Snake game">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Classic Game</p>
+          <h1>Run Game</h1>
+        </div>
+        <div class="score-panels" aria-live="polite">
+          <div class="scoreboard">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="scoreboard high-scoreboard">
+            <span>High Score</span>
+            <strong id="highScore">0</strong>
+            <small id="highScoreNote" class="score-note" aria-live="polite"></small>
+          </div>
+        </div>
+      </header>
+
+      <div class="status-row">
+        <p id="status">Use arrow keys or WASD to start.</p>
+        <div class="action-buttons">
+          <button id="pauseButton" type="button">Pause</button>
+          <button id="restartButton" type="button">Restart</button>
+        </div>
+      </div>
+
+      <div class="board-shell">
+        <section id="pauseOverlay" class="pause-overlay hidden" aria-live="polite">
+          <div class="pause-panel">
+            <p class="pause-label">Game Paused</p>
+            <h2>Take a Breather</h2>
+            <p class="pause-copy">Press resume when you are ready to jump back in.</p>
+            <div class="pause-actions">
+              <button id="resumeButton" type="button">Resume</button>
+              <button id="overlayRestartButton" type="button">Restart Round</button>
+            </div>
+            <p class="pause-hint">You can also press P to pause or resume.</p>
+          </div>
+        </section>
+        <div
+          id="board"
+          class="board"
+          role="grid"
+          aria-label="Snake board"
+          tabindex="0"
+        ></div>
+      </div>
+
+      <section class="controls" aria-label="Touch controls">
+        <button type="button" data-direction="up">Up</button>
+        <div class="controls-row">
+          <button type="button" data-direction="left">Left</button>
+          <button type="button" data-direction="down">Down</button>
+          <button type="button" data-direction="right">Right</button>
+        </div>
+      </section>
+
+      <footer class="game-footer" aria-label="Game credit">
+        <div class="maker-logo">Made by Tajus K., 2026</div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./snake-logic.js"></script>
+  <script src="./snake-game.js"></script>
+</body>
+</html>
