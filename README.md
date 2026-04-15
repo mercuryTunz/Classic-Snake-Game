@@ -1,2 +1,2 @@
 # Classic-Snake-Game
-Made by me on Codex but gets changed time to time.
+Made by imfromgalway2 on Codex but gets changed time to time.
